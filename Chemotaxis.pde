@@ -14,8 +14,8 @@ class Bubbles {
 //dont change the vars in the constructor  
   Bubbles() {
     //initialize all ur vars
-    myX = (int)(Math.random()*750);
-    myY = (int)((Math.random()*851));
+    myX = (int)(Math.random()*500);
+    myY = (int)((Math.random()*651));
     mySize = (int)(Math.random()*131+30);
     mySpeed = mySize/23;
     myColor = color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256),(int)((Math.random()*81)+20));
@@ -40,15 +40,18 @@ class Bubbles {
     //move bubbles up
     myY = (int)(myY - mySpeed);
     if (myY < -50) {
-      myY = (int)(Math.random()*50+750);
+      myY = (int)(Math.random()*75+500);
     }
   }
   
   void walk()  {
-    //move bubbles left and right
+   //move bubbles left and right
    myX += ((int)(Math.random()*7)-3);
    if(myX > 800) {
      myX += ((int)(Math.random())*6-6);
+   }
+   if(myX < 0) {
+     myX += ((int)(Math.random())*6);
    }
   }
  
@@ -103,7 +106,7 @@ class Bubbles {
 Bubbles [] players;
 
 void setup (){
-  size(750,750);
+  size(500,500);
   players = new Bubbles[100];
   for(int i = 0; i < players.length; i++) {
     players[i] = new Bubbles();
