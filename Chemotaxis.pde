@@ -1,7 +1,7 @@
 PImage devil;//image of devil
 PImage angel;//image of angel
 
-int angelCount, devilCount; //used to track angel/devils among all objects
+int angelCount, devilCount; //used to track angel or devils among all objects
 int devils = (int)((Math.random()*6)+1); //used in the end to randomly determine how many devils there will be, from 1-6
 
 class Bubbles {
