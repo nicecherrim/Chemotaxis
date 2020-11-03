@@ -1,5 +1,5 @@
-//PImage devil;//image of devil
-//PImage angel;//image of angel
+PImage devil;//image of devil
+PImage angel;//image of angel
 
 int angelCount, devilCount; //used to track angel/devils among all objects
 int devils = (int)((Math.random()*6)+1); //used in the end to randomly determine how many devils there will be, from 1-6
@@ -12,8 +12,8 @@ void setup (){
   for(int i = 0; i < players.length; i++) {
     players[i] = new Bubbles();
   }
-  //devil = loadImage("https://github.com/nicecherrim/Chemotaxis/blob/master/devil.png?raw=true", "png");
-  //angel = loadImage("https://github.com/nicecherrim/Chemotaxis/blob/master/angel.png?raw=true", "png");
+  devil = loadImage("https://github.com/nicecherrim/Chemotaxis/blob/master/devil.png?raw=true", "png");
+  angel = loadImage("https://github.com/nicecherrim/Chemotaxis/blob/master/angel.png?raw=true", "png");
 }
 
 void draw() {
@@ -87,13 +87,13 @@ class Bubbles {
  void addFriend() {
    //adds either a devil or agnel in bubble
    if(myFriend == true) {
-     //image(angel, myX-(mySize/4), myY-(mySize/4), mySize/2, mySize/2);
-     fill(0,0,255, 50);
-     ellipse(myX, myY, mySize/2, mySize/2);
+     image(angel, myX-(mySize/4), myY-(mySize/4), mySize/2, mySize/2);
+     //fill(0,0,255, 50);
+     //ellipse(myX, myY, mySize/2, mySize/2);
    } else {
-     //image(devil, myX-(mySize/4), myY-(mySize/4), mySize/2, mySize/2);
-     fill(255,0,0, 50);
-     ellipse(myX, myY, mySize/2, mySize/2); 
+     image(devil, myX-(mySize/4), myY-(mySize/4), mySize/2, mySize/2);
+     //fill(255,0,0, 50);
+     //ellipse(myX, myY, mySize/2, mySize/2); 
    }
  }
  
